@@ -2,16 +2,18 @@
 
 GCC4MBED_DIR=/home/arnavm89/gcc4mbed
 
-TARGETS_FOR_DEVICE := TARGET_NXP
-PROJECT         := Hello_custom
+#GCC4MBED_TYPE:= Debug
+PROJECT         := homework3
 DEVICES         := LPC1768
 NO_FLOAT_SCANF  := 1
 NO_FLOAT_PRINTF := 1
 
 SRC          := src
-INCDIRS      :=
+INCDIRS      := inc
 LIBS_PREFIX  :=
 LIBS_SUFFIX  :=
+
+OBJCOPY=/home/arnavm89/gcc4mbed/gcc-arm-none-eabi/bin/arm-none-eabi-objcopy
 
 ifdef CUSTOM
 
@@ -58,4 +60,9 @@ clean:
 
 else
 include $(GCC4MBED_DIR)/build/gcc4mbed.mk
+
+#check:
+#	checksum -p cortex-m3 -d LPC1768/$(PROJECT).bin
+#	$(OBJCOPY) -I binary -O ihex LPC1768/$(PROJECT).bin LPC1768/$(PROJECT).hex
+	
 endif

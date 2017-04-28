@@ -3,6 +3,7 @@
 	<name>MBed</name>
 	<comment></comment>
 	<projects>
+		<project>gcc4mbed</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
