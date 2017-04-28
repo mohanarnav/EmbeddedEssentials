@@ -1,35 +1,32 @@
 #include "mbed.h"
-#include "DebounceIn.h"
 
-DebounceIn pb(p8);
-DigitalOut myled(LED1);
+PwmOut PWM(p21);
+PwmOut PWM2(LED1);
+DigitalIn enable(p5);
 
+int main()
+{
+	PWM.period(0.1);
+	PWM2.period(0.1);
 
-int main() {
+   	PWM=0.5;
+   	PWM2=0.5;
 
-    pb.mode(PullUp);
-    int count = 0;
+   	while(1){
 
-    int old_pb=0;
-    int new_pb;
+   		if(enable){
+   			PWM.period(0.05);
+   			PWM2.period(0.05);
 
-    while(1) {
+   			PWM=0.5;
+   			PWM2=0.5;
+   		}else{
+   			PWM.period(0.1);
+   			PWM2.period(0.1);
 
-    new_pb = pb;
+   			PWM=0.5;
+   			PWM2=0.5;
+   		}
+   	}
 
-        if ((new_pb==0) && (old_pb==1)) {
-
-        	count++;
-
-            if (count==10){
-                    myled = 1;
-                    count = 0;
-                }
-
-            }
-
-        	old_pb = new_pb;
-
-
-        }
 }

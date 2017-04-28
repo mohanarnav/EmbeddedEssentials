@@ -1,4 +1,4 @@
-LPC1768/7segment.o: src/7segment.cpp inc/7segment.h \
+LPC1768/main.o: Homework3/Question3/main.cpp \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -76,8 +76,6 @@ LPC1768/7segment.o: src/7segment.cpp inc/7segment.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/wait_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
-
-inc/7segment.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 
