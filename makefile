@@ -3,12 +3,12 @@
 GCC4MBED_DIR=/home/arnavm89/gcc4mbed
 
 #GCC4MBED_TYPE:= Debug
-PROJECT         := homework3
+PROJECT         := homework4
 DEVICES         := LPC1768
 NO_FLOAT_SCANF  := 1
-NO_FLOAT_PRINTF := 1
+NO_FLOAT_PRINTF := 0
 
-SRC          := Homework3/Question3
+SRC          := Homework4/Question3
 INCDIRS      := inc
 LIBS_PREFIX  :=
 LIBS_SUFFIX  :=
