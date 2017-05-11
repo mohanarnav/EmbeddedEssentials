@@ -3,17 +3,18 @@
 GCC4MBED_DIR=/home/arnavm89/gcc4mbed
 
 #GCC4MBED_TYPE:= Debug
-PROJECT         := homework4
+PROJECT         := Homework5
 DEVICES         := LPC1768
 NO_FLOAT_SCANF  := 1
 NO_FLOAT_PRINTF := 0
 
-SRC          := Homework4/Question3
-INCDIRS      := inc
+SRC          := Homework5/Question2
+INCDIRS      := inc 
 LIBS_PREFIX  :=
 LIBS_SUFFIX  :=
 
 OBJCOPY=/home/arnavm89/gcc4mbed/gcc-arm-none-eabi/bin/arm-none-eabi-objcopy
+
 
 ifdef CUSTOM
 

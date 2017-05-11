@@ -9,12 +9,45 @@
 #define COURSEPROJECT_SENSOR_H_
 
 #include<stdint.h>
+#include "mbed.h"
+#include<queue>
 
-class Sensor{
+using namespace std;
 
-	char* sensor_type;
-	uint32_t samplingRate;
+typedef enum
+{
+	HR,
+	GSR
+} SensorType;
 
+
+typedef struct
+{
+	SensorType sensor_type;
+	float data;
+} Buffer;
+
+extern queue<Buffer> buffer;
+
+enum Status
+{
+	Ready,
+	Busy
+};
+
+class Sensor
+{
+
+	private:
+
+		AnalogIn* in;
+		SensorType sensor_type;
+		uint32_t sampling_rate;
+		float data;
+
+	public:
+		Sensor(SensorType s, uint32_t r, AnalogIn* i);
+		void Task(void);
 
 
 };
