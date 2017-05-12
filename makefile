@@ -8,7 +8,7 @@ DEVICES         := LPC1768
 NO_FLOAT_SCANF  := 1
 NO_FLOAT_PRINTF := 0
 
-SRC          := Homework5/Question2
+SRC          := Homework5/Question3
 INCDIRS      := inc 
 LIBS_PREFIX  :=
 LIBS_SUFFIX  :=

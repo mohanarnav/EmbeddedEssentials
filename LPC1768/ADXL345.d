@@ -1,4 +1,4 @@
-LPC1768/main.o: Homework5/Question3/main.cpp \
+LPC1768/ADXL345.o: Homework5/Question3/ADXL345.cpp \
  Homework5/Question3/ADXL345.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \

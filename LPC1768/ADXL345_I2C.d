@@ -1,5 +1,5 @@
-LPC1768/main.o: Homework5/Question3/main.cpp \
- Homework5/Question3/ADXL345.h \
+LPC1768/ADXL345_I2C.o: Homework5/Question3/ADXL345_I2C.cpp \
+ Homework5/Question3/ADXL345_I2C.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -78,7 +78,7 @@ LPC1768/main.o: Homework5/Question3/main.cpp \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
 
-Homework5/Question3/ADXL345.h:
+Homework5/Question3/ADXL345_I2C.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 
