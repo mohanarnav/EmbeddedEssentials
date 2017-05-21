@@ -1,4 +1,4 @@
-LPC1768/main.o: MidTerm/main.cpp MidTerm/accel.h \
+LPC1768/accel.o: MidTerm/accel.cpp MidTerm/accel.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \

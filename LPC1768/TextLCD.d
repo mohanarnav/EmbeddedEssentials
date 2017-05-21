@@ -1,5 +1,5 @@
-LPC1768/ADXL345.o: Homework5/Question3/ADXL345.cpp \
- Homework5/Question3/ADXL345.h \
+LPC1768/TextLCD.o: MidTerm/TextLCD.cpp MidTerm/TextLCD.h \
+ MidTerm/TextDisplay.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -78,7 +78,9 @@ LPC1768/ADXL345.o: Homework5/Question3/ADXL345.cpp \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
 
-Homework5/Question3/ADXL345.h:
+MidTerm/TextLCD.h:
+
+MidTerm/TextDisplay.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 
