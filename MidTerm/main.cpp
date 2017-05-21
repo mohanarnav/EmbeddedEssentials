@@ -6,22 +6,30 @@
  */
 
 #include "accel.h"
+#include "TextLCD.h"
 
 SPI sp(p11,p12,p13); // setup SPI interface on pins 11,12,13
 DigitalOut cs(p14); // use pin 14 as chip select
-DigitalOut led(LED2);
+DigitalOut led(LED1);
+DigitalOut led2(LED2);
 
 InterruptIn cal_but(p18);
+InterruptIn lcd_but(p17);
+
 Timer debounce;
+
 int count;
 uint8_t file_flag = 0;
+uint8_t lcd_flag = 0;
 
 
-// TextLCD lcd(p24, p25, p26, p27, p28, p29, p30); // rs, rw, e, d0, d1, d2, d3
+
+TextLCD lcd(p24, p25, p26, p27, p28, p29, p30); // rs, rw, e, d0, d1, d2, d3
 Accel accel(&sp, &cs);
 LocalFileSystem local("local");
 void toggle(void);
 void Calibrate(FILE* fp, int count);
+void isr2(void);
 
 int main()
 {
@@ -29,6 +37,8 @@ int main()
 	// Setting up custom calibration
 	debounce.start();
 	cal_but.rise(&toggle);
+	lcd_but.rise(&isr2);
+
 	FILE *fp;
 	printf("testing communication \n");
 
@@ -39,10 +49,45 @@ int main()
 
 			Calibrate(fp, count);
 			file_flag = 0;
-			wait(0.5);
+			wait(1);
 		}
 
-		wait(0.5);
+		if(lcd_flag == 1)
+		{
+			accel.getData_float();
+			printf("Displaying on the LCD \n");
+			lcd.cls();
+			lcd.locate(2, 0);
+			lcd.printf("Accel Readings: ");
+			wait(2);
+			lcd.cls();
+			lcd.locate(2, 0);
+			lcd.printf("x = %+1.2fg", accel.x_float);
+			wait(2);
+			lcd.cls();
+			lcd.locate(2, 0);
+			lcd.printf("y = %+1.2fg", accel.y_float);
+			wait(2);
+			lcd.cls();
+			lcd.locate(2, 0);
+			lcd.printf("z = %+1.2fg", accel.z_float);
+			wait(2);
+			lcd.cls();
+			lcd_flag=0;
+			led2 =0;
+		}
+		wait(1);
+
+	}
+
+}
+
+void isr2(void){
+
+	if(debounce.read_ms()>500){
+			led2 = 1;
+			debounce.reset();
+			lcd_flag = 1;
 
 	}
 

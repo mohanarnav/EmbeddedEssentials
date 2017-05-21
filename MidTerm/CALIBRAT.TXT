@@ -1,0 +1,8 @@
+Calibrations for accelerometer axes: 
++z axis:  x = +0.00g, y = -0.20g, z = +10.04g 
+  -z axis:  x = -0.12g, y = +0.40g, z = +10.16g 
+  +x axis:  x = -0.12g, y = +0.56g, z = +10.00g 
+  -x axis:  x = -0.08g, y = +0.40g, z = +10.20g 
+  +y axis:  x = -0.12g, y = +0.44g, z = +10.12g 
+  -y axis:  x = -0.12g, y = +0.44g, z = +10.08g 
+  

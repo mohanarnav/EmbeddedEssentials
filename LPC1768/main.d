@@ -75,7 +75,8 @@ LPC1768/main.o: MidTerm/main.cpp MidTerm/accel.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/gpio_irq_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/wait_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
- /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
+ /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h \
+ MidTerm/TextLCD.h MidTerm/TextDisplay.h
 
 MidTerm/accel.h:
 
@@ -232,3 +233,7 @@ MidTerm/accel.h:
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h:
+
+MidTerm/TextLCD.h:
+
+MidTerm/TextDisplay.h:
