@@ -3,12 +3,12 @@
 GCC4MBED_DIR=/home/arnavm89/gcc4mbed
 
 #GCC4MBED_TYPE:= Debug
-PROJECT         := MidTerm
+PROJECT         := MidTerm_2
 DEVICES         := LPC1768
 NO_FLOAT_SCANF  := 1
 NO_FLOAT_PRINTF := 0
 
-SRC          := MidTerm
+SRC          := MidTerm_2
 INCDIRS      := inc 
 LIBS_PREFIX  :=
 LIBS_SUFFIX  :=

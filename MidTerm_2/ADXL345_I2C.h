@@ -527,7 +527,6 @@ int setPowerMode(char mode);
      * @return The contents of the INT_SOURCE register.
      */
      char getInterruptSource(void);
-    
      I2C i2c_;
    
 private:

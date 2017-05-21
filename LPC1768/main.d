@@ -1,4 +1,4 @@
-LPC1768/main.o: MidTerm/main.cpp MidTerm/accel.h \
+LPC1768/main.o: MidTerm_2/main.cpp \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -76,9 +76,7 @@ LPC1768/main.o: MidTerm/main.cpp MidTerm/accel.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/wait_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h \
- MidTerm/TextLCD.h MidTerm/TextDisplay.h MidTerm/tempSensor.h
-
-MidTerm/accel.h:
+ MidTerm_2/ADXL345_I2C.h MidTerm_2/TextLCD.h MidTerm_2/TextDisplay.h
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 
@@ -234,8 +232,8 @@ MidTerm/accel.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h:
 
-MidTerm/TextLCD.h:
+MidTerm_2/ADXL345_I2C.h:
 
-MidTerm/TextDisplay.h:
+MidTerm_2/TextLCD.h:
 
-MidTerm/tempSensor.h:
+MidTerm_2/TextDisplay.h:
