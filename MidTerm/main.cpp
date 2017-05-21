@@ -7,29 +7,36 @@
 
 #include "accel.h"
 #include "TextLCD.h"
+#include "tempSensor.h"
 
 SPI sp(p11,p12,p13); // setup SPI interface on pins 11,12,13
+I2C ic(p9, p10);
 DigitalOut cs(p14); // use pin 14 as chip select
 DigitalOut led(LED1);
 DigitalOut led2(LED2);
+DigitalOut led3(LED3);
 
 InterruptIn cal_but(p18);
 InterruptIn lcd_but(p17);
+InterruptIn temp_but(p16);
 
 Timer debounce;
 
 int count;
 uint8_t file_flag = 0;
 uint8_t lcd_flag = 0;
-
+uint8_t temp_flag = 0;
 
 
 TextLCD lcd(p24, p25, p26, p27, p28, p29, p30); // rs, rw, e, d0, d1, d2, d3
 Accel accel(&sp, &cs);
+TempSensor temp(&ic);
+
 LocalFileSystem local("local");
 void toggle(void);
 void Calibrate(FILE* fp, int count);
 void isr2(void);
+void isr3(void);
 
 int main()
 {
@@ -38,6 +45,7 @@ int main()
 	debounce.start();
 	cal_but.rise(&toggle);
 	lcd_but.rise(&isr2);
+	temp_but.rise(&isr3);
 
 	FILE *fp;
 	printf("testing communication \n");
@@ -76,6 +84,24 @@ int main()
 			lcd_flag=0;
 			led2 =0;
 		}
+
+		if(temp_flag == 1)
+		{
+			printf("Printing Temperature \n");
+			temp.getReadings();
+			wait(1);
+			lcd.cls();
+			lcd.locate(2,0);
+			lcd.printf("Temperature: ");
+			wait(2);
+			lcd.cls();
+			lcd.locate(2,0);
+			lcd.printf("%.2f degC", temp.data);
+			wait(2);
+			lcd.cls();
+			led3=0;
+			temp_flag =0;
+		}
 		wait(1);
 
 	}
@@ -88,6 +114,17 @@ void isr2(void){
 			led2 = 1;
 			debounce.reset();
 			lcd_flag = 1;
+
+	}
+
+}
+
+void isr3(void){
+
+	if(debounce.read_ms()>500){
+			led3 = 1;
+			debounce.reset();
+			temp_flag = 1;
 
 	}
 
