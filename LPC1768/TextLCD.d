@@ -1,5 +1,5 @@
-LPC1768/TextLCD.o: MidTerm_2/TextLCD.cpp MidTerm_2/TextLCD.h \
- MidTerm_2/TextDisplay.h \
+LPC1768/TextLCD.o: CourseProject/TextLCD.cpp CourseProject/TextLCD.h \
+ CourseProject/TextDisplay.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -78,9 +78,9 @@ LPC1768/TextLCD.o: MidTerm_2/TextLCD.cpp MidTerm_2/TextLCD.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
 
-MidTerm_2/TextLCD.h:
+CourseProject/TextLCD.h:
 
-MidTerm_2/TextDisplay.h:
+CourseProject/TextDisplay.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 

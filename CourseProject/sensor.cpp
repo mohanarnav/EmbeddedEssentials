@@ -7,7 +7,10 @@
 
 #include "sensor.h"
 
-queue<Buffer> buffer;
+Buffer buffer[BUF_LENGTH];
+DigitalOut extLED(p20);
+int itr=0;
+uint8_t write_flag = 0;
 
 Sensor::Sensor(SensorType s, uint32_t r, AnalogIn* i){
 
@@ -20,12 +23,16 @@ Sensor::Sensor(SensorType s, uint32_t r, AnalogIn* i){
 void Sensor::Task(void){
 
 	data = *in;
-	printf("%f ", data);
-	buffer.push({sensor_type, data});
+	buffer[itr] = {sensor_type, data};
+	itr++;
 
-	if(buffer.size()>1000)
+	if(itr>BUF_LENGTH-1)
 	{
-		buffer.pop();
+		extLED = !extLED;
+		itr=0;
+		write_flag=1;
 	}
 
+
 }
+

@@ -1,4 +1,4 @@
-LPC1768/ADXL345.o: MidTerm_2/ADXL345.cpp MidTerm_2/ADXL345.h \
+LPC1768/bt.o: CourseProject/bt.cpp CourseProject/bt.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -75,9 +75,10 @@ LPC1768/ADXL345.o: MidTerm_2/ADXL345.cpp MidTerm_2/ADXL345.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/gpio_irq_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/wait_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
- /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
+ /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h \
+ CourseProject/sensor.h
 
-MidTerm_2/ADXL345.h:
+CourseProject/bt.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 
@@ -232,3 +233,5 @@ MidTerm_2/ADXL345.h:
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h:
+
+CourseProject/sensor.h:

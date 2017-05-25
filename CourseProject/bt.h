@@ -10,6 +10,8 @@
 
 #include "mbed.h"
 
+extern int temp_itr;
+
 class BT {
 
 private:
@@ -20,7 +22,8 @@ private:
 public:
 
 	BT(Serial* d, int32_t speed);
-	void sendData(int32_t length);
+	void sendData(void);
+	char getData();
 
 };
 

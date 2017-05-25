@@ -14,6 +14,8 @@
 
 using namespace std;
 
+#define BUF_LENGTH 1000
+
 typedef enum
 {
 	HR,
@@ -27,7 +29,10 @@ typedef struct
 	float data;
 } Buffer;
 
-extern queue<Buffer> buffer;
+
+extern Buffer buffer[1000];
+extern int itr;
+extern uint8_t write_flag;
 
 enum Status
 {

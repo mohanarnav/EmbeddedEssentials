@@ -1,4 +1,4 @@
-LPC1768/ADXL345_I2C.o: MidTerm_2/ADXL345_I2C.cpp MidTerm_2/ADXL345_I2C.h \
+LPC1768/sensor.o: CourseProject/sensor.cpp CourseProject/sensor.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/platform.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/targets/hal/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
@@ -77,7 +77,7 @@ LPC1768/ADXL345_I2C.o: MidTerm_2/ADXL345_I2C.cpp MidTerm_2/ADXL345_I2C.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/hal/sleep_api.h \
  /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/rtc_time.h
 
-MidTerm_2/ADXL345_I2C.h:
+CourseProject/sensor.h:
 
 /home/arnavm89/gcc4mbed/external/mbed/libraries/mbed/api/mbed.h:
 

@@ -8,6 +8,8 @@
 #include "bt.h"
 #include "sensor.h"
 
+int temp_itr = 0;
+
 BT::BT(Serial* d, int32_t speed){
 
 	dev = d;
@@ -16,17 +18,31 @@ BT::BT(Serial* d, int32_t speed){
 
 }
 
-void BT::sendData(int32_t length){
+void BT::sendData(void){
 
-	while(length>0){
 
-		Buffer temp = buffer.front();
-		buffer.pop();
-		data = (uint8_t) (temp.data*128);
-		uint8_t sendData = (data << 1) & ( (uint8_t) temp.sensor_type);
-		dev->putc((unsigned char) sendData);
-		length--;
+	if(itr!=temp_itr)
+	{
+		if(itr!=0)
+		{
+			dev->printf("%+1.2f\n", buffer[itr].data);
+		}else{
+		    dev->printf("%+1.2f\n", buffer[BUF_LENGTH - 1].data);
+		}
+
+		temp_itr = itr;
 
 	}
 
+}
+
+char BT::getData(){
+
+	if(dev->readable())
+	{
+		return dev->getc();
+	}else
+	{
+		return '0';
+	}
 }
